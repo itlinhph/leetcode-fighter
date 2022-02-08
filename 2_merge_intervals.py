@@ -22,9 +22,6 @@ intervals[i].length == 2
 0 <= starti <= endi <= 104
 """
 
-from curses.ascii import SO
-from os import stat
-
 
 class Solution:
     @staticmethod
