@@ -17,7 +17,7 @@ Constraints:
 -104 <= nums[i] <= 104
 """
 from typing import List
-
+import heapq
 
 class Solution:
     def findKthLargest_v1(self, nums: List[int], k: int) -> int:
@@ -25,6 +25,8 @@ class Solution:
         nums.sort()
         return nums[-k]
 
+    def findKthLargest_heap(self, nums: List[int], k: int) -> int:
+        return heapq.nlargest(k, nums)[-1]
 
 # nums = [3,2,3,1,2,4,5,5,6]
 # k = 4
