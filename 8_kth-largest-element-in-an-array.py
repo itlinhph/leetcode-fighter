@@ -23,7 +23,7 @@ class Solution:
     def findKthLargest_v1(self, nums: List[int], k: int) -> int:
         # using sorting
         nums.sort()
-        return nums[len(nums) - k]
+        return nums[-k]
 
 
 # nums = [3,2,3,1,2,4,5,5,6]
