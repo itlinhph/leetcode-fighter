@@ -33,7 +33,6 @@ Constraints:
 1 <= nums.length <= 100
 0 <= nums[i] <= 100
 """
-from operator import index
 from typing import List
 
 class Solution:
