@@ -39,12 +39,16 @@ class Solution:
 
     @staticmethod
     def two_sum_v2(nums: list, target: int) -> list:
-        dict_value = {}  # value -> index
-        for i, value in enumerate(nums):
-            remain_value = target - value
-            if remain_value in dict_value:
-                return [dict_value[remain_value], i]
-            dict_value[value] = i
+        # calculate remain value -> index
+        dict_remain = {}
+        for i, item in enumerate(nums):
+            remain = target - item
+            dict_remain[remain] = i
+
+        # loop and check has remain value in dict_remain
+        for i, item in enumerate(nums):
+            if item in dict_remain and dict_remain[item] != i:
+                return [i, dict_remain[item]]
         return [None, None]
 
 # try to use hashmap
